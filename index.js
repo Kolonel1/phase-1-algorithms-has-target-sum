@@ -1,8 +1,24 @@
-function hasTargetSum(array, target) {
+/*function hasTargetSum(array, target) {
+  for(let i = 0;i<array.length;i++){
+    for(let j = i+1;j<array.length;j++){
+      console.log(array[i])
+      console.log(array[j])
+      console.log(array[i] + array[j])
+     return ((array[i] + array[j]) === target) 
+    }
+  }
   // Write your algorithm here
-}
+}*/
 
-/* 
+function hasTargetSum(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === complement) return true;
+    }
+  }
+  return false;}
+/* //what is wrong with the code i have commented out  code i wonder
   Write the Big O time complexity of your function here
 */
 
